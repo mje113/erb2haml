@@ -23,7 +23,7 @@ namespace :haml do
       "#{color("Haml", RED_FG)}..."
 
     Find.find("app/views/") do |path|
-      if FileTest.file?(path) and path.downcase.match(/\.html\.erb$/i)
+      if FileTest.file?(path) and path.downcase.match(/\.erb$/i)
         haml_path = path.slice(0...-3)+"haml"
 
         unless FileTest.exists?(haml_path)
